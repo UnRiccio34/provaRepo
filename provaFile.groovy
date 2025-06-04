@@ -11,7 +11,8 @@ mapper = new ObjectMapper()
 
 // TODO: why when I enable this line, the println below will not work?
 mapper.writeValue(System.out, user)
-println()
+println("aggiunta diversa dal main")
 
 user2 = mapper.readValue('{"name":"Zemian"}', User.class)
 println("user2 " + user2)
+println("seconda aggiunta diversa dal main ciao")
