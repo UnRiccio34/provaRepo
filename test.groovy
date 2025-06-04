@@ -14,7 +14,7 @@ import com.accenture.ies.devops.mds.managers.Kubernetes
 import com.accenture.ies.devops.mds.managers.Gitlab
 import com.accenture.ies.devops.mds.managers.Helm
 import com.accenture.ies.devops.mds.utilities.IStepExecutor
-import com.accenture.ies.devops.mds.managers.Versioning
+import com.acce
  
  
  
@@ -29,7 +29,7 @@ def call(body) {
     /*
     * Blocco variabili globali
     */
-    def configs, applicationConfigs, workspace_path
+    def , applicationConfigs, workspace_path
     def gitlabURL, gitlabTOKEN
     def repoURL, nexusURL, nexusHelmURL
     def valuesYAML, namespace, jenkins_baseURL, cd
@@ -55,7 +55,7 @@ def call(body) {
  
  
     pipeline {
-        parameters {
+        parameters 
             string(name: 'component', description: 'Inserire il nome del repository GitLab')
             string(name: 'componentVersion', description: 'componentVersion')
             // RESTList(name: 'imageVersion',
@@ -75,7 +75,7 @@ def call(body) {
  
         options {
             disableConcurrentBuilds()
-            timeout(time: 5, unit: 'MINUTES')
+            timeouttime: 5, unit: 'MINUTES')
             buildDiscarder(logRotator(numToKeepStr: '30'))
             ansiColor('xterm')
         }
